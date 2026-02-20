@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Explorador de Pokémons</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/Systems/SearchApi.js"></script>
+    <script type="module" src="/Systems/RollSystem.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎮 Pokédex</h1>
+            <div class="generations-selector">
+                <button class="theme-toggle" id="themeToggle"></button>
+                <label for="generation">Geração:</label>
+                <select id="generation">
+                    <option value="gen1">Geração I (Kanto)</option>
+                    <option value="gen2">Geração II (Johto)</option>
+                    <option value="gen3">Geração III (Hoenn)</option>
+                    <option value="gen4">Geração IV (Sinnoh)</option>
+                    <option value="gen5">Geração V (Unova)</option>
+                    <option value="gen6">Geração VI (Kalos)</option>
+                    <option value="gen7">Geração VII (Alola)</option>
+                    <option value="gen8">Geração VIII (Galar)</option>
+                    <option value="gen9">Geração IX (Paldea)</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="pokemon-container">
+            <!-- Imagem do Pokémon - Esquerda -->
+            <div class="pokemon-image-section">
+                <img src="" alt="Pokémon"">
+            </div>
+
+            <!-- Status do Pokémon - Direita -->
+            <div class="pokemon-stats-section">
+                <h2 class="pokemon-name"></h2>
+
+                <div class="pokemon-type">
+                </div>
+
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span class="stat-name">HP</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Ataque</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defesa</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Sp. Atq</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Sp. Def</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Velocidade</span>
+                        <div class="stat-bar">
+                            <div class="stat-bar-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações Adicionais - Abaixo -->
+            <div class="pokemon-info-section" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+                <!-- Coluna de Status à esquerda -->
+                <div class="status-column" style="min-width: 120px;">
+                    <div class="status-title" style="font-weight: bold; margin-bottom: 8px;">Status</div>
+                    <div class="status-item">HP: <span class="status-value">0</span></div>
+                    <div class="status-item">Ataque: <span class="status-value">0</span></div>
+                    <div class="status-item">Defesa: <span class="status-value">0</span></div>
+                    <div class="status-item">Sp. Atq: <span class="status-value">0</span></div>
+                    <div class="status-item">Sp. Def: <span class="status-value">0</span></div>
+                    <div class="status-item">Velocidade: <span class="status-value">0</span></div>
+                </div>
+                <!-- Total de Status à direita -->
+                <div class="total-status-column" style="min-width: 120px; text-align: right;">
+                    <div class="total-status-title" style="font-weight: bold; margin-bottom: 8px;">Total</div>
+                    <div class="total-status-value" style="font-size: 1.2em;">0</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pokédex - Todos os direitos reservados a <strong>Willian Antunes</strong> | Dados de Pokémon fornecidos por <a href="https://pokeapi.co/" target="_blank">PokéAPI</a></p>
+    </footer>
+
+    <script src="/Systems/ColorThemeSystem.js"></script>
+    <script type="module" src="/Systems/addInfoSystem.js"></script>
+</body>
+</html>
